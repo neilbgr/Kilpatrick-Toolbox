@@ -30,6 +30,7 @@ NVGcolor MIDI_LABEL_BG_COLOR = nvgRGB(0xcc, 0xcc, 0xcc);
 
 void init(Plugin* p) {
 	pluginInstance = p;
+#ifndef CARDINAL_MINI_TRIM_INIT
     p->addModel(modelStereo_Meter);
     p->addModel(modelTest_Osc);
     p->addModel(modelQuad_Panner);
@@ -46,4 +47,5 @@ void init(Plugin* p) {
     p->addModel(modelMIDI_Clock);
     p->addModel(modelMIDI_CC_Note);
     p->addModel(modelMulti_Meter);
+#endif
 }
